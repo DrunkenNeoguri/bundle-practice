@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    /** 언어 및 환경 설정 **/
+
+    // Typescript의 코드를 어느 버전의 javascript 코드로 컴파일할지 결정
+    "target": "esnext",
+    // 컴파일에 포함할 라이브러리 파일 목록을 Array로 묶음
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // TypeScript를 Javascript으로 트랜스파일링할 때, 모듈을 어떤 시스템 기준으로 설정할지 결정
+    // 트랜스 파일링: 한 언어로 작성한 코드를 다른 언어로 비슷한 수준으로 하여금 추상화하는 과정
+    "module": "esnext",
+    // ts, tsx 파일에 js, jsx 파일을 import해서 쓰게할 수 있는지,
+    // 즉, javascript 파일을 컴파일하는 것을 허용할지 여부 결정
+    "allowJs": true,
+    // 모든 '.d.ts' 파일의 타입 체크를 스킵함.
+    "skipLibCheck": true,
+    // 컴파일된 결과물인 자바스크립트 파일을 생성하지 않을지 결정.
+    "noEmit": false,
+    // 프로젝트가 증분 컴파일을 위해 .tsbuildinfo 파일을 저장할지 여부를 결정
+    // 증분 컴파일 - 프로젝트 내에서 수정된 부분만 다시 컴파일 하는 것.
+    "incremental": true,
+
+    /** lint 적용 사항 **/
+
+    // 타입 체크를 엄격하게 할 것인지, 아닌지 여부 결정
+    "strict": true,
+    // 사용되지 않은 지역 변수에 대해 알려줄지 결정
+    "noUnusedLocals": true,
+    // 사용하지 않은 파라미터에 대해 알려줄지 결정
+    "noUnusedParameters": true,
+    // switch 문에서 fallthrough 케이스가 발생할 수 있을 때, 알려줄지 결정
+    "noFallthroughCasesInSwitch": true,
+
+    /* 번들러 적용 사항 */
+
+    // 모듈 경로를 어디서부터 시작하여 탐색할지 결정
+    // node로 하면 node-modules부터 찾기 시작.
+    "moduleResolution": "node",
+    // .json 파일들을 import하는 것을 허용할지 여부 결정
+    "resolveJsonModule": true,
+    // 타입스크립트 파일 내에 import와 export 문이 없을 시, 해당 파일을 전역 공간으로 정의할지 여부 결정
+    "isolatedModules": true,
+    // tsx 파일을 jsx 파일로 어떻게 컴파일할 것인지 여부 결정
+    // preserve 혹은 react, react-jsx가 많이 쓰인다.
+    "jsx": "react-jsx",
+    // 같은 파일이라도, 참조 방식이 일관되지 않을 경우 이를 허용해줄지 등을 결정
+    "forceConsistentCasingInFileNames": true,
+    // commonjs 모듈 방식을 import를 이용해서 가져올수 있도록 허용할지 결정
+    "esModuleInterop": true
+  },
+  // 컴파일할 대상을 array로 묶음
+  "include": ["src"],
+  // 컴파일에서 제외할 대상을 array로 묶음
+  "exclude": ["node_modules"]
+}
