@@ -423,10 +423,9 @@ React는 `index.html` 파일 내에 있는 `id=”root”`가 기입된 `div` �
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "watch": "webpack --watch",
-	// 개발 환경
-  **"dev": "npx webpack serve --config webpack.dev.js",
+  "dev": "npx webpack serve --config webpack.dev.js",
   "dev_build": "webpack --config webpack.dev.js"
-  "prod_build": "webpack --config webpack.prod.js",**
+  "prod_build": "webpack --config webpack.prod.js",
 },
 
 ```
@@ -440,7 +439,7 @@ React는 `index.html` 파일 내에 있는 `id=”root”`가 기입된 `div` �
 
 여기까지 완료했다면 터미널에 이제 ‘npm run dev’를 입력하고 실행해보자.
 
-```json
+```
 $ npm run dev
 
 > webpack-setting@1.0.0 dev
